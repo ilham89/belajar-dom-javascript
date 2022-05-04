@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="head-bar">
+    <nav id="navMain">
+        <h1 class="title">Bookshelf Apps</h1>
+        <div class="search-container">
+            <button><i class="ic-search"></i></button>
+            <form id="searchBook">
+                <input id="searchBookTitle" placeholder="Ketikan judul buku yang dicari" type="text">
+                <button id="searchCancel" type="reset">Batal</button>
+            </form>
+        </div>
+    </nav>
+    <nav id="navBar">
+        <button class="nav-bar-button">UNFINISHED</button>
+        <button class="nav-bar-button">FINISHED</button>
+    </nav>
+</header>
+<main>
+    <section class="float-section">
+        <button><i class="ic-add"></i></button>
+        <div class="bg-temp"></div>
+        <div class="input-container forms card">
+            <h2>Masukkan Buku Baru</h2>
+            <form id="inputBook">
+                <div class="input">
+                    <label for="inputBookTitle">Judul</label>
+                    <input id="inputBookTitle" type="text" required>
+                </div>
+                <div class="input">
+                    <label for="inputBookAuthor">Penulis</label>
+                    <input id="inputBookAuthor" type="text" required>
+                </div>
+                <div class="input">
+                    <label for="inputBookYear">Tahun</label>
+                    <input id="inputBookYear" type="number" required>
+                </div>
+                <div class="input-inline">
+                    <label for="inputBookIsComplete">Selesai dibaca</label>
+                    <input id="inputBookIsComplete" type="checkbox">
+                </div>
+                <div class="button-container">
+                    <button id="bookCancel" type="reset">Batal</button>
+                    <button id="bookSubmit" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="book-shelf card">
+        <div id="incompleteBookshelfList" class="book-list">
+        </div>
+    </section>
+
+    <section class="book-shelf card">
+        <div id="completeBookshelfList" class="book-list">
+        </div>
+    </section>
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/dom.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
